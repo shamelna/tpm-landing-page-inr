@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master TPM & 5S - Transform Your Manufacturing Operations | Kaizen Academy Australia</title>
+    <meta name="description" content="Learn Total Productive Maintenance and 5S methodology from industry experts. Get certified and transform your operations with proven strategies.">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #333333 0%, #555555 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .badge {
+            background: #ffd559;
+            color: #333333;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(255, 213, 89, 0.3);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 80px 0;
+        }
+
+        .intro-section {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .intro-section h2 {
+            font-size: 2.5rem;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .intro-section p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Course Cards */
+        .courses-section {
+            margin: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333333;
+            margin-bottom: 50px;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .course-card.popular {
+            border: 3px solid #ffd559;
+            transform: scale(1.05);
+        }
+
+        .popular-badge {
+            background: #ffd559;
+            color: #333333;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            position: absolute;
+            top: -10px;
+            right: 20px;
+        }
+
+        .course-title {
+            font-size: 1.8rem;
+            color: #333333;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .course-subtitle {
+            color: #7f8c8d;
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        .price-section {
+            margin: 30px 0;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #95a5a6;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .discounted-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ff4444;
+            margin-bottom: 10px;
+        }
+
+        .currency-toggle {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .currency-btn {
+            background: #ecf0f1;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            border-radius: 5px;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+
+        .currency-btn.active {
+            background: #ffd559;
+            color: #333333;
+        }
+
+        .features-list {
+            list-style: none;
+            text-align: left;
+            margin: 30px 0;
+        }
+
+        .features-list li {
+            padding: 8px 0;
+            color: #555;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .features-list li:before {
+            content: "✓";
+            color: #ff4444;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .enroll-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .enroll-btn {
+            background: linear-gradient(135deg, #333333 0%, #555555 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(51, 51, 51, 0.3);
+        }
+
+        .enroll-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(51, 51, 51, 0.4);
+        }
+
+        /* What You'll Learn Section */
+        .learning-section {
+            background: white;
+            padding: 80px 0;
+            margin: 80px 0;
+        }
+
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+        .learning-module {
+            text-align: center;
+        }
+
+        .module-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ffd559 0%, #ffed4a 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: #333333;
+        }
+
+        .module-title {
+            font-size: 1.5rem;
+            color: #333333;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .module-features {
+            list-style: none;
+            text-align: left;
+        }
+
+        .module-features li {
+            padding: 5px 0;
+            color: #555;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .module-features li:before {
+            content: "•";
+            color: #ffd559;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 80px 0;
+            background: #ecf0f1;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .benefit-title {
+            font-size: 1.3rem;
+            color: #333333;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #333333 0%, #555555 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer {
+            background: #333333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .course-card.popular {
+                transform: none;
+            }
+
+            .learning-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        /* Currency Display - USD as default */
+        .usd-price {
+            display: block;
+        }
+
+        .inr-price {
+            display: none;
+        }
+
+        .currency-inr .usd-price {
+            display: none;
+        }
+
+        .currency-inr .inr-price {
+            display: block;
+        }
+
+        .currency-usd .usd-price {
+            display: block;
+        }
+
+        .currency-usd .inr-price {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+        // Simple currency switcher
+        function switchCurrency(currency) {
+            const body = document.body;
+            const inrBtn = document.querySelector('.currency-btn:first-child');
+            const usdBtn = document.querySelector('.currency-btn:last-child');
+            
+            // Remove active from both buttons
+            inrBtn.classList.remove('active');
+            usdBtn.classList.remove('active');
+            
+            // Remove previous currency classes
+            body.classList.remove('currency-inr', 'currency-usd');
+            
+            // Add active to clicked button and toggle currency
+            if (currency === 'usd') {
+                usdBtn.classList.add('active');
+                body.classList.add('currency-usd');
+            } else {
+                inrBtn.classList.add('active');
+                body.classList.add('currency-inr');
+            }
+        }
+
+        // Set USD as default on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            switchCurrency('usd');
+        });
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>Master TPM & 5S Methodology</h1>
+            <p class="subtitle">Transform Your Manufacturing Operations with Proven Strategies</p>
+            <div class="badge">Get Certified by Kaizen Academy Australia</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Introduction -->
+            <section class="intro-section">
+                <h2>Unlock Manufacturing Excellence</h2>
+                <p>Join thousands of professionals who have transformed their operations using Total Productive Maintenance (TPM) and 5S methodology. Learn from industry experts and get certified with our comprehensive online courses.</p>
+            </section>
+
+            <!-- Currency Toggle -->
+            <div class="currency-toggle">
+                <button class="currency-btn" onclick="switchCurrency('inr')">INR (₹)</button>
+                <button class="currency-btn active" onclick="switchCurrency('usd')">USD ($)</button>
+            </div>
+
+            <!-- Courses Section -->
+            <section class="courses-section">
+                <h2 class="section-title">Choose Your Learning Path</h2>
+                <div class="courses-grid">
+                    <!-- TPM Fundamentals -->
+                    <div class="course-card">
+                        <h3 class="course-title">TPM Fundamentals</h3>
+                        <p class="course-subtitle">Module 0 - Foundation Course</p>
+                        <div class="price-section">
+                            <div class="original-price inr-price">₹13,000</div>
+                            <div class="original-price usd-price">$150</div>
+                            <div class="discounted-price inr-price">₹4,000</div>
+                            <div class="discounted-price usd-price">$45</div>
+                        </div>
+                        <ul class="features-list">
+                            <li>Video Tutorials</li>
+                            <li>PDF Tutorials and Templates</li>
+                            <li>Test Your Knowledge</li>
+                            <li>Introduction to TPM</li>
+                            <li>Why Use TPM</li>
+                            <li>Key Benefits</li>
+                            <li>9 Pillars of TPM</li>
+                        </ul>
+                        <div class="enroll-buttons">
+                            <a href="#upi-payment-instructions" class="enroll-btn inr-price" style="background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);">Pay ₹4,000 via UPI</a>
+                            <a href="https://academy.continuousimprovement.education/l/pdp/tpm-fundamentals?coupon_code=TPM0" class="enroll-btn usd-price" target="_blank">Enroll Now - $45 (Use Code: TPM0)</a>
+                        </div>
+                    </div>
+
+                    <!-- 5S Learning Course -->
+                    <div class="course-card">
+                        <h3 class="course-title">5S Learning Course</h3>
+                        <p class="course-subtitle">Module 1 - Implementation Course</p>
+                        <div class="price-section">
+                            <div class="original-price inr-price">₹10,000</div>
+                            <div class="original-price usd-price">$110</div>
+                            <div class="discounted-price inr-price">₹3,000</div>
+                            <div class="discounted-price usd-price">$34</div>
+                        </div>
+                        <ul class="features-list">
+                            <li>Video Tutorials</li>
+                            <li>PDF Tutorials and Templates</li>
+                            <li>Test Your Knowledge</li>
+                            <li>Get Certified on 5S</li>
+                            <li>Introduction to 5S</li>
+                            <li>Detailed Explanation of 5S</li>
+                            <li>Real-life Examples</li>
+                        </ul>
+                        <div class="enroll-buttons">
+                            <a href="#upi-payment-instructions" class="enroll-btn inr-price" style="background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);">Pay ₹3,000 via UPI</a>
+                            <a href="https://academy.continuousimprovement.education/l/pdp/5s-learning-course?coupon_code=TPM1" class="enroll-btn usd-price" target="_blank">Enroll Now - $34 (Use Code: TPM1)</a>
+                        </div>
+                    </div>
+
+                    <!-- Combined Package -->
+                    <div class="course-card popular">
+                        <div class="popular-badge">Most Popular</div>
+                        <h3 class="course-title">Complete Package</h3>
+                        <p class="course-subtitle">Module 0 & 1 - Full Certification</p>
+                        <div class="price-section">
+                            <div class="original-price inr-price">₹17,500</div>
+                            <div class="original-price usd-price">$200</div>
+                            <div class="discounted-price inr-price">₹5,000</div>
+                            <div class="discounted-price usd-price">$56</div>
+                        </div>
+                        <ul class="features-list">
+                            <li>All TPM Fundamentals Content</li>
+                            <li>All 5S Learning Content</li>
+                            <li>Video Tutorials</li>
+                            <li>PDF Tutorials and Templates</li>
+                            <li>Test Your Knowledge</li>
+                            <li>Double Certification</li>
+                            <li>Best Value - Save 72%</li>
+                        </ul>
+                        <div class="enroll-buttons">
+                            <a href="#upi-payment-instructions" class="enroll-btn inr-price" style="background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);">Pay ₹5,000 via UPI</a>
+                            <a href="https://academy.continuousimprovement.education/p/tpm-fundamentals-5s-bundle" class="enroll-btn usd-price" target="_blank">Enroll Now - $56 (Use Code: TPM-BUNDLE)</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- What You'll Learn -->
+            <section class="learning-section">
+                <div class="container">
+                    <h2 class="section-title">What You'll Learn</h2>
+                    <div class="learning-grid">
+                        <div class="learning-module">
+                            <div class="module-icon">📊</div>
+                            <h3 class="module-title">TPM Fundamentals (Module 0)</h3>
+                            <ul class="module-features">
+                                <li>Introduction to TPM</li>
+                                <li>Why use TPM</li>
+                                <li>Key Benefits</li>
+                                <li>9 Pillars of TPM</li>
+                                <li>Implementation Strategies</li>
+                                <li>Real-world Case Studies</li>
+                            </ul>
+                        </div>
+                        <div class="learning-module">
+                            <div class="module-icon">🔧</div>
+                            <h3 class="module-title">5S Learning Course (Module 1)</h3>
+                            <ul class="module-features">
+                                <li>Introduction to 5S</li>
+                                <li>Detailed Explanation of 5S</li>
+                                <li>Real-life Examples</li>
+                                <li>Implementation Templates</li>
+                                <li>Measurement & Sustainability</li>
+                                <li>Certification Process</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Benefits Section -->
+            <section class="benefits-section">
+                <div class="container">
+                    <h2 class="section-title">Why Choose Our Courses?</h2>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🎥</div>
+                            <h3 class="benefit-title">Video Tutorials</h3>
+                            <p>Learn from expert-led video content with real-world examples and practical demonstrations.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📚</div>
+                            <h3 class="benefit-title">PDF Resources</h3>
+                            <p>Access comprehensive PDF tutorials, templates, and implementation guides you can use immediately.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">✅</div>
+                            <h3 class="benefit-title">Test Knowledge</h3>
+                            <p>Validate your learning with interactive assessments and knowledge checks throughout the course.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🏆</div>
+                            <h3 class="benefit-title">Get Certified</h3>
+                            <p>Earn official certification from Kaizen Academy Australia to advance your career.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Payment Information Section -->
+            <section id="upi-payment-instructions" style="padding: 60px 0; background: white;">
+                <div class="container">
+                    <h2 class="section-title">Enrollment Instructions</h2>
+                    
+                    <!-- USD Payment Info -->
+                    <div class="usd-price" style="margin: 40px 0; padding: 30px; background: #e8f4fd; border: 2px solid #3498db; border-radius: 10px;">
+                        <h3 style="color: #333333; margin-bottom: 20px; text-align: center;">💳 USD Payment Instructions</h3>
+                        <div style="text-align: center;">
+                            <p style="font-size: 1.1rem; margin-bottom: 20px;">Click the enrollment buttons above and use the provided coupon codes:</p>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
+                                <div style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #e0e0e0;">
+                                    <strong>TPM Fundamentals:</strong><br>
+                                    <span style="font-size: 1.5rem; color: #ff4444; font-weight: bold;">$45</span><br>
+                                    Code: <span style="background: #ffd559; padding: 2px 8px; border-radius: 4px; font-family: monospace;">TPM0</span>
+                                </div>
+                                <div style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #e0e0e0;">
+                                    <strong>5S Learning Course:</strong><br>
+                                    <span style="font-size: 1.5rem; color: #ff4444; font-weight: bold;">$34</span><br>
+                                    Code: <span style="background: #ffd559; padding: 2px 8px; border-radius: 4px; font-family: monospace;">TPM1</span>
+                                </div>
+                                <div style="background: white; padding: 20px; border-radius: 8px; border: 2px solid #ffd559;">
+                                    <strong>🏆 Complete Bundle:</strong><br>
+                                    <span style="font-size: 1.5rem; color: #ff4444; font-weight: bold;">$56</span><br>
+                                    Code: <span style="background: #ffd559; padding: 2px 8px; border-radius: 4px; font-family: monospace;">TPM-BUNDLE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- INR UPI Payment Info -->
+                    <div class="inr-price" style="margin: 40px 0; padding: 30px; background: #e8f5e8; border: 2px solid #27ae60; border-radius: 10px;">
+                        <h3 style="color: #333333; margin-bottom: 30px; text-align: center;">📱 UPI Payment Instructions (India)</h3>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: center;">
+                            
+                            <!-- QR Code Section -->
+                            <div style="text-align: center;">
+                                <h4 style="margin-bottom: 15px; color: #27ae60;">Scan QR Code to Pay</h4>
+                                <div style="background: white; padding: 20px; border-radius: 10px; display: inline-block; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                                    <img src="QR-INR.jpg" alt="UPI Payment QR Code" style="max-width: 200px; height: auto; display: block;">
+                                </div>
+                                <p style="margin-top: 15px; color: #555; font-size: 0.9rem;">Scan with any UPI app (PhonePe, Paytm, GPay, etc.)</p>
+                            </div>
+
+                            <!-- Payment Details -->
+                            <div>
+                                <h4 style="margin-bottom: 20px; color: #27ae60;">Payment Details</h4>
+                                <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                                    <strong>UPI ID:</strong> <span style="font-family: monospace; background: #f8f9fa; padding: 2px 6px; border-radius: 3px;">9823126688@axl</span>
+                                </div>
+                                <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                                    <strong>Mobile Number:</strong> <span style="font-family: monospace; background: #f8f9fa; padding: 2px 6px; border-radius: 3px;">9823 126 688</span>
+                                </div>
+                                
+                                <h5 style="color: #333333; margin-bottom: 15px;">💰 Course Prices - Pay Exact Amount:</h5>
+                                <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 10px; border-left: 4px solid #ff4444;">
+                                    <strong>TPM Fundamentals Course:</strong><br>
+                                    <span style="font-size: 1.8rem; color: #ff4444; font-weight: bold;">₹4,000</span>
+                                </div>
+                                <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 10px; border-left: 4px solid #ff4444;">
+                                    <strong>5S Learning Course:</strong><br>
+                                    <span style="font-size: 1.8rem; color: #ff4444; font-weight: bold;">₹3,000</span>
+                                </div>
+                                <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 3px solid #ffd559; border-left: 4px solid #ff4444;">
+                                    <strong>🏆 Complete Bundle (Best Value):</strong><br>
+                                    <span style="font-size: 1.8rem; color: #ff4444; font-weight: bold;">₹5,000</span>
+                                    <div style="background: #fff3cd; padding: 8px; border-radius: 4px; margin-top: 8px;">
+                                        <small><strong>Save ₹2,000!</strong> Both courses individually = ₹7,000</small>
+                                    </div>
+                                </div>
+                                
+                                <div style="background: #fff3cd; padding: 15px; border-radius: 6px; border-left: 4px solid #ffd559;">
+                                    <strong>📧 After Payment:</strong> Send screenshot to <a href="mailto:learn@continuousimprovement.education" style="color: #333333;">learn@continuousimprovement.education</a> with your name and course selection.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Start Your Transformation Today</h2>
+            <p class="cta-subtitle">Join thousands of professionals who have already transformed their operations</p>
+            <a href="#courses-section" class="enroll-btn">Choose Your Course</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Kaizen Academy Australia. All rights reserved.</p>
+            <p>Questions? Contact us at <a href="mailto:learn@continuousimprovement.education" style="color: #ffd559; text-decoration: none;">learn@continuousimprovement.education</a></p>
+        </div>
+    </footer>
+</body>
+</html>
